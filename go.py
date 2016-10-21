@@ -9,7 +9,7 @@ import time
 def run_sslocal():
     accounts = get_account_from_iss()
 
-    for acc in accounts[1:]:
+    for acc in accounts:
         cmd = 'sslocal -s %s -p %s -b 0.0.0.0 -l %s -k %s -m %s -d restart' % (acc['server'],
             acc['port'], '1080', acc['passwd'], acc['encrypt'])
         print cmd
