@@ -1,0 +1,1 @@
+* */1 * * * /home/pi/www/iss/go.py >/dev/null 2>&1

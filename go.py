@@ -3,8 +3,6 @@
 
 from iss import get_account_from_iss
 import os
-import schedule
-import time
 
 def run_sslocal():
     accounts = get_account_from_iss()
@@ -20,9 +18,3 @@ if __name__ == '__main__':
     print 'sslocal background monitor is running now...'
 
     run_sslocal()
-    schedule.every().hour.do(run_sslocal)
-    print('Press Ctrl+{0} to exit'.format('Break' if os.name == 'nt' else 'C'))
-
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
